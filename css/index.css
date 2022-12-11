@@ -20,11 +20,14 @@ body {
 }
 .section-content {
   position: relative;
+  margin: 0px;
   width: 60%;
   height: 60%;
   left: 20%;
   top: 20%;
   transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-title {
@@ -34,16 +37,35 @@ body {
   color: wheat;
 }
 
+.section-icon {
+  width: 7vw;
+  height: 7vw;
+  align-self: center;
+  filter: invert(100%) brightness(90%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #chemistry-section {
   background-image: linear-gradient(rgb(255, 81, 0), rgb(255, 115, 0));
+}
+#chemistry-section .section-icon {
+  background-image: url(../img/chem-icon.png);
 }
 
 #physics-section {
   background-image: linear-gradient(rgb(3, 58, 209), rgb(1, 122, 202));
 }
+#physics-section .section-icon {
+  background-image: url(../img/physics-icon.png);
+}
 
 #biology-section {
   background-image: linear-gradient(rgb(24, 141, 1), rgb(34, 206, 0));
+}
+#biology-section .section-icon {
+  background-image: url(../img/biology-icon.png);
 }
 
 /*# sourceMappingURL=index.css.map */
