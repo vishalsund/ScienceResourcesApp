@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  overflow: hidden;
 }
 
 #section-container {
@@ -11,22 +12,38 @@ body {
 
 .section {
   flex: 1;
-  transition: flex 0.5s;
+  transition: all 0.5s;
 }
 .section:hover {
-  flex: 1.1;
+  z-index: 10;
+  transform: scale(1.1);
+}
+.section-content {
+  position: relative;
+  width: 60%;
+  height: 60%;
+  left: 20%;
+  top: 20%;
+  transition: all 0.5s;
+}
+
+.section-title {
+  font-size: 300%;
+  text-align: center;
+  font-family: Consolas, "Courier New", monospace;
+  color: wheat;
 }
 
 #chemistry-section {
-  background-color: red;
+  background-image: linear-gradient(rgb(255, 81, 0), rgb(255, 115, 0));
 }
 
 #physics-section {
-  background-color: green;
+  background-image: linear-gradient(rgb(3, 58, 209), rgb(1, 122, 202));
 }
 
 #biology-section {
-  background-color: blue;
+  background-image: linear-gradient(rgb(24, 141, 1), rgb(34, 206, 0));
 }
 
 /*# sourceMappingURL=index.css.map */
