@@ -1,0 +1,37 @@
+@use "vars.scss" as *;
+
+body {
+    margin: 0px;
+}
+
+#section-container {
+    width: 100vw;
+    height: 100vh;
+
+    flex-direction: row;
+    display: flex;
+}
+
+.section {
+    flex: 1;
+    transition: flex .5s;
+
+    &:hover {
+        flex: 1.1;
+    }
+}
+
+#chemistry-section {
+    // width: 33%;
+    background-color: red;
+
+    
+}
+
+#physics-section {
+    background-color: green;
+}
+
+#biology-section {
+    background-color: blue;
+}

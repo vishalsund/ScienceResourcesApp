@@ -1,0 +1,32 @@
+body {
+  margin: 0px;
+}
+
+#section-container {
+  width: 100vw;
+  height: 100vh;
+  flex-direction: row;
+  display: flex;
+}
+
+.section {
+  flex: 1;
+  transition: flex 0.5s;
+}
+.section:hover {
+  flex: 1.1;
+}
+
+#chemistry-section {
+  background-color: red;
+}
+
+#physics-section {
+  background-color: green;
+}
+
+#biology-section {
+  background-color: blue;
+}
+
+/*# sourceMappingURL=index.css.map */
