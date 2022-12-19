@@ -38,8 +38,8 @@ body {
 }
 
 .section-icon {
-  width: 7vw;
-  height: 7vw;
+  width: 5vw;
+  height: 5vw;
   align-self: center;
   filter: invert(100%) brightness(90%);
   background-position: center;
