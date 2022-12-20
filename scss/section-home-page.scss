@@ -1,0 +1,36 @@
+@use "base.scss";
+
+body {
+    background-color: var(--color1);
+    user-select: none;
+}
+
+#title {
+    font-size: 500%;
+    text-align: center;
+    margin-top: 1.5%;
+}
+
+#section-container {
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    top: 30%;
+}
+
+.section {
+    font-size: 300%;
+    width: 100%;
+    height: 10vh;
+
+    border-radius: 25%;
+
+    transition: all 1s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.section-title {
+
+}
