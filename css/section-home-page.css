@@ -3,7 +3,11 @@ body {
 }
 
 body {
-  background-color: var(--color1);
+  background-image: linear-gradient(var(--color3), var(--color4));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   user-select: none;
 }
 
@@ -32,7 +36,7 @@ body {
 }
 .section:hover {
   transform: scale(1.03);
-  background-color: rgba(163, 163, 163, 0.5);
+  background-color: rgba(255, 255, 255, 0.205);
 }
 
 .section-title {
