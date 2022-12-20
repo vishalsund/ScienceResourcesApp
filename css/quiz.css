@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#quiz-title {
+  top: 10%;
+  text-align: center;
+  font-size: 300%;
+}
+
+#score {
+  position: absolute;
+  font-size: 200%;
+  top: 1vh;
+  left: 1vh;
+  user-select: none;
+}
+
+#question {
+  margin-top: 10%;
+  font-size: 200%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+#answer-container {
+  position: absolute;
+  top: 50%;
+  width: 80%;
+  height: 25%;
+  left: 10%;
+  display: inline-flex;
+}
+
+@keyframes correct-animation {
+  0% {
+    transform: rotateY(0);
+  }
+  12.4% {
+    color: transparent;
+    background-color: rgb(184, 184, 184);
+  }
+  12.5% {
+    background-color: green;
+    color: transparent;
+  }
+  25% {
+    transform: rotateY(180deg);
+  }
+  75% {
+    transform: rotateY(180deg);
+  }
+  87.5% {
+    background-color: green;
+    color: transparent;
+  }
+  87.6% {
+    color: transparent;
+    background-color: rgb(184, 184, 184);
+  }
+  0% {
+    transform: rotateY(0);
+  }
+}
+@keyframes incorrect-animation {
+  0% {
+    transform: rotateY(0);
+  }
+  12.4% {
+    color: transparent;
+    background-color: rgb(184, 184, 184);
+  }
+  12.5% {
+    background-color: red;
+    color: transparent;
+  }
+  25% {
+    transform: rotateY(180deg);
+  }
+  75% {
+    transform: rotateY(180deg);
+  }
+  87.5% {
+    background-color: red;
+    color: transparent;
+  }
+  87.6% {
+    color: transparent;
+    background-color: rgb(184, 184, 184);
+  }
+  0% {
+    transform: rotateY(0);
+  }
+}
+.answer {
+  width: 22%;
+  margin-right: 4%;
+  background-color: rgb(184, 184, 184);
+  height: 100%;
+  text-align: center;
+  border-radius: 3vh;
+  display: flex;
+  justify-content: center;
+  /* align horizontal */
+  align-items: center;
+  transition: all 0.5s;
+}
+.answer.correct {
+  animation: correct-animation 1s;
+}
+.answer.incorrect {
+  animation: incorrect-animation 1s;
+}
+
+.answer-text {
+  user-select: none;
+  font-size: 300%;
+}
+
+.answer:last-child {
+  margin-right: 0%;
+}
+
+/*# sourceMappingURL=quiz.css.map */
