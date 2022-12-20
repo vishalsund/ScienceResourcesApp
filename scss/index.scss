@@ -1,3 +1,5 @@
+@use "base.scss";
+
 $top-bar-height: 0vh;
 
 body {
@@ -48,7 +50,6 @@ $section-width: 60%;
 .section-title {
     font-size: 300%;
     text-align: center;
-    font-family: Consolas, 'Courier New', monospace;
     color: wheat;
 }
 
