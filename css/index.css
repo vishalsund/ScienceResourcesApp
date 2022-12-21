@@ -31,7 +31,8 @@ body {
 body {
   margin: 0px;
   overflow: hidden;
-  color: rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 0.75);
+  user-select: none;
 }
 
 #section-container {
@@ -70,7 +71,7 @@ body {
   width: 5vw;
   height: 5vw;
   align-self: center;
-  filter: opacity(50%);
+  filter: invert(100%) opacity(75%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -91,7 +92,7 @@ body {
 }
 
 #biology-section {
-  background-image: linear-gradient(#006100, #008b00);
+  background-image: linear-gradient(#008b00, #38B000);
 }
 #biology-section .section-icon {
   background-image: url(../img/biology-icon.png);
