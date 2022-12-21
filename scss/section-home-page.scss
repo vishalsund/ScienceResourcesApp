@@ -8,12 +8,19 @@ body {
     background-attachment: fixed;
 
     user-select: none;
+
+    color: rgba(0, 0, 0, 0.377);
 }
 
 #title {
     font-size: 500%;
     text-align: center;
     margin-top: 1.5%;
+
+    transition: all .5s;
+    &:hover {
+        transform: scale(1.03);
+    }
 }
 
 #section-container {
