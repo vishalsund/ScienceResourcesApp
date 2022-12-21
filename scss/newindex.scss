@@ -25,10 +25,22 @@ body {
         z-index: 10;
         transform: scaleX(1.1);
     }
+
+    &.selected {
+        z-index: 15;
+        transform: scaleX(3);
+
+        &#chem-section {
+            translate: calc(-100vw / 3 ) 0 0;
+        }
+
+        &#bio-section {
+            translate: calc(100vw / 3 ) 0 0;
+        }
+    }
 }
 
 #chem-section {
-    // width: 33%;
     background-image: linear-gradient(#{chem.$color3}, #{chem.$color4});
     & .section-icon {
         background-image: url(../img/chem-icon.png);

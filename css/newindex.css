@@ -49,6 +49,16 @@ body {
   z-index: 10;
   transform: scaleX(1.1);
 }
+.section.selected {
+  z-index: 15;
+  transform: scaleX(3);
+}
+.section.selected#chem-section {
+  translate: -33.3333333333vw 0 0;
+}
+.section.selected#bio-section {
+  translate: 33.3333333333vw 0 0;
+}
 
 #chem-section {
   background-image: linear-gradient(#0077B6, #00B4D8);
