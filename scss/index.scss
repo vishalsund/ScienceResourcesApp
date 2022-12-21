@@ -1,5 +1,7 @@
 @use "base.scss";
 @use "themes/biology.scss" as bio;
+@use "themes/chemistry.scss" as chem;
+@use "themes/physics.scss" as phy;
 
 $top-bar-height: 0vh;
 
@@ -10,7 +12,7 @@ body {
 
 #section-container {
     width: 100vw;
-    height: calc(100vh - $top-bar-height);
+    height: calc(100vh - #{$top-bar-height});
 
     flex-direction: row;
     display: flex;
@@ -36,11 +38,11 @@ $section-width: 60%;
     position: relative;
     margin: 0px;
 
-    width: $section-width;
-    height: $section-height;
+    width: #{$section-width};
+    height: #{$section-height};
 
-    left: calc(( 100% - $section-width ) / 2);
-    top: calc(( 100% - $section-height ) / 2);
+    left: calc(( 100% - #{$section-width} ) / 2);
+    top: calc(( 100% - #{$section-height} ) / 2);
 
     transition: all .5s;
 
@@ -67,21 +69,21 @@ $section-width: 60%;
 
 #chemistry-section {
     // width: 33%;
-    background-image: linear-gradient(bio.$biology-color3, bio.$biology-color4);
+    background-image: linear-gradient(#{chem.$chemistry-color3}, #{chem.$chemistry-color4});
     & .section-icon {
         background-image: url(../img/chem-icon.png);
     }
 }
 
 #physics-section {
-    background-image: linear-gradient(#FF4800, #FF6000, #FF7900);
+    background-image: linear-gradient(#{phy.$physics-color3}, #{phy.$physics-color4});
     & .section-icon {
         background-image: url(../img/physics-icon.png);
     }
 }
 
 #biology-section {
-    background-image: linear-gradient(#006100, #008b00, #38B000);
+    background-image: linear-gradient(#{bio.$biology-color3}, #{bio.$biology-color4});
     & .section-icon {
         background-image: url(../img/biology-icon.png);
     }

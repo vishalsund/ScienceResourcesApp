@@ -25,15 +25,6 @@ function compileDir(dir)
             } catch {
 
             }
-            // is scss
-            // sass.compileAsync({file: readDir+"/"+dir+"/"+file},  (err, result) => {
-            //     if (err)
-            //     {
-            //         console.error(err);
-            //     } else {
-            //         fs.writeFileSync(writeDir+dir+"/"+getFileName(file)+".css", result.css)
-            //     }
-            // })
         } else {
             // is Dir
             compileDir(dir+"/"+file)
