@@ -1,0 +1,72 @@
+body {
+  overflow-x: hidden;
+  font-family: Consolas, "Courier New", monospace;
+}
+
+:root {
+  --color1: #003a1d;
+  --color2: #006100;
+  --color3: #008b00;
+  --color4: #38B000;
+  --color5: #c0ffa2;
+}
+
+:root {
+  --color1: #03045E;
+  --color2: #023E8A;
+  --color3: #0077B6;
+  --color4: #00B4D8;
+  --color5: #ADE8F4;
+}
+
+:root {
+  --color1: #FF4800;
+  --color2: #FF6000;
+  --color3: #FF7900;
+  --color4: #ff9a42;
+  --color5: #fc9b47;
+  --color6: #f3cba9;
+}
+
+body {
+  overflow: hidden;
+  margin: 0px;
+}
+
+#section-container {
+  display: inline-flex;
+}
+
+.section {
+  width: 33.3333333333vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s;
+}
+.section:hover {
+  z-index: 10;
+  transform: scaleX(1.1);
+}
+
+#chem-section {
+  background-image: linear-gradient(#0077B6, #00B4D8);
+}
+#chem-section .section-icon {
+  background-image: url(../img/chem-icon.png);
+}
+
+#phy-section {
+  background-image: linear-gradient(#FF7900, #ff9a42);
+}
+#phy-section .section-icon {
+  background-image: url(../img/physics-icon.png);
+}
+
+#bio-section {
+  background-image: linear-gradient(#008b00, #38B000);
+}
+#bio-section .section-icon {
+  background-image: url(../img/biology-icon.png);
+}

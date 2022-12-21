@@ -1,13 +1,13 @@
-$biology-color1: #003a1d;
-$biology-color2: #006100;
-$biology-color3: #008b00;
-$biology-color4: #38B000;
-$biology-color5: #c0ffa2;
+$color1: #003a1d;
+$color2: #006100;
+$color3: #008b00;
+$color4: #38B000;
+$color5: #c0ffa2;
 
 :root {
-    --color1: #{$biology-color1};
-    --color2: #{$biology-color2};
-    --color3: #{$biology-color3};
-    --color4: #{$biology-color4};
-    --color5: #{$biology-color5};
+    --color1: #{$color1};
+    --color2: #{$color2};
+    --color3: #{$color3};
+    --color4: #{$color4};
+    --color5: #{$color5};
 }
