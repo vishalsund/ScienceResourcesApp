@@ -29,71 +29,44 @@ body {
 }
 
 body {
-  margin: 0px;
   overflow: hidden;
-  color: rgba(255, 255, 255, 0.75);
-  user-select: none;
+  margin: 0px;
 }
 
 #section-container {
-  width: 100vw;
-  height: calc(100vh - 0vh);
-  flex-direction: row;
-  display: flex;
+  display: inline-flex;
 }
 
 .section {
-  flex: 1;
+  width: 33.3333333333vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   transition: all 0.5s;
 }
 .section:hover {
   z-index: 10;
-  transform: scale(1.1);
-}
-.section-content {
-  position: relative;
-  margin: 0px;
-  width: 60%;
-  height: 60%;
-  left: calc(( 100% - 60% ) / 2);
-  top: calc(( 100% - 60% ) / 2);
-  transition: all 0.5s;
-  display: flex;
-  flex-direction: column;
+  transform: scaleX(1.1);
 }
 
-.section-title {
-  font-size: 300%;
-  text-align: center;
-}
-
-.section-icon {
-  width: 5vw;
-  height: 5vw;
-  align-self: center;
-  filter: invert(100%) opacity(75%);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#chemistry-section {
+#chem-section {
   background-image: linear-gradient(#0077B6, #00B4D8);
 }
-#chemistry-section .section-icon {
+#chem-section .section-icon {
   background-image: url(../img/chem-icon.png);
 }
 
-#physics-section {
+#phy-section {
   background-image: linear-gradient(#FF7900, #ff9a42);
 }
-#physics-section .section-icon {
+#phy-section .section-icon {
   background-image: url(../img/physics-icon.png);
 }
 
-#biology-section {
+#bio-section {
   background-image: linear-gradient(#008b00, #38B000);
 }
-#biology-section .section-icon {
+#bio-section .section-icon {
   background-image: url(../img/biology-icon.png);
 }

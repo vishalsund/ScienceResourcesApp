@@ -70,21 +70,21 @@ $section-width: 60%;
 
 #chemistry-section {
     // width: 33%;
-    background-image: linear-gradient(#{chem.$chemistry-color2}, #{chem.$chemistry-color3});
+    background-image: linear-gradient(#{chem.$color3}, #{chem.$color4});
     & .section-icon {
         background-image: url(../img/chem-icon.png);
     }
 }
 
 #physics-section {
-    background-image: linear-gradient(#{phy.$physics-color2}, #{phy.$physics-color3});
+    background-image: linear-gradient(#{phy.$color3}, #{phy.$color4});
     & .section-icon {
         background-image: url(../img/physics-icon.png);
     }
 }
 
 #biology-section {
-    background-image: linear-gradient(#{bio.$biology-color3}, #{bio.$biology-color4});
+    background-image: linear-gradient(#{bio.$color3}, #{bio.$color4});
     & .section-icon {
         background-image: url(../img/biology-icon.png);
     }

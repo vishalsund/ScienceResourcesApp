@@ -1,13 +1,13 @@
-$chemistry-color1: #03045E;
-$chemistry-color2: #023E8A;
-$chemistry-color3: #0077B6;
-$chemistry-color4: #00B4D8;
-$chemistry-color5: #ADE8F4;
+$color1: #03045E;
+$color2: #023E8A;
+$color3: #0077B6;
+$color4: #00B4D8;
+$color5: #ADE8F4;
 
 :root {
-    --color1: #{$chemistry-color1};
-    --color2: #{$chemistry-color2};
-    --color3: #{$chemistry-color3};
-    --color4: #{$chemistry-color4};
-    --color5: #{$chemistry-color5};
+    --color1: #{$color1};
+    --color2: #{$color2};
+    --color3: #{$color3};
+    --color4: #{$color4};
+    --color5: #{$color5};
 }

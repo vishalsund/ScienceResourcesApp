@@ -1,15 +1,15 @@
-$physics-color1: #FF4800;
-$physics-color2: #FF6000;
-$physics-color3: #FF7900;
-$physics-color4: #ff9a42;
-$physics-color5: #fc9b47;
-$physics-color6: #f3cba9;
+$color1: #FF4800;
+$color2: #FF6000;
+$color3: #FF7900;
+$color4: #ff9a42;
+$color5: #fc9b47;
+$color6: #f3cba9;
 
 :root {
-    --color1: #{$physics-color1};
-    --color2: #{$physics-color2};
-    --color3: #{$physics-color3};
-    --color4: #{$physics-color4};
-    --color5: #{$physics-color5};
-    --color6: #{$physics-color6};
+    --color1: #{$color1};
+    --color2: #{$color2};
+    --color3: #{$color3};
+    --color4: #{$color4};
+    --color5: #{$color5};
+    --color6: #{$color6};
 }
