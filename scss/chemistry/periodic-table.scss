@@ -1,5 +1,6 @@
+@use "../base.scss";
+@use "../themes/chemistry.scss" as chem;
 #periodictable{
-    width: 90vw;
-    aspect-ratio: calc(330 / 255);
-    height: 80vh;
+    width: 60vw;
+    margin-left: 20vw;
 }

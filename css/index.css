@@ -78,14 +78,14 @@ body {
 }
 
 #chemistry-section {
-  background-image: linear-gradient(#023E8A, #0077B6);
+  background-image: linear-gradient(#0077B6, #00B4D8);
 }
 #chemistry-section .section-icon {
   background-image: url(../img/chem-icon.png);
 }
 
 #physics-section {
-  background-image: linear-gradient(#FF6000, #FF7900);
+  background-image: linear-gradient(#FF7900, #ff9a42);
 }
 #physics-section .section-icon {
   background-image: url(../img/physics-icon.png);
