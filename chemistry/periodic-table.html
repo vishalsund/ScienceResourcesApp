@@ -10,24 +10,24 @@
     </head>
     <body>
         <div class = "dropdown">
-            <label for = "periodictables" id = "dropdown">Sort By:</label>
-            <select name = "periodictables" id = "periodictables">
-                <option value = "Periodic_Table_of_Elements_w_Chemical_Group_Block_PubChem">Chemical Group Block</option>
-                <option value = "Periodic_Table_of_Elements_w_Standard_State_PubChem">Standard State</option>
-                <option value = "Periodic_Table_of_Elements_w_Atomic_Mass_PubChem">Atomic Mass</option>
-                <option value = "Periodic_Table_of_Elements_w_Electron_Configuration_PubChem">Electron Configuration</option>
-                <option value = "Periodic_Table_of_Elements_w_Oxidation_States_PubChem">Oxidation States</option>
-                <option value = "Periodic_Table_of_Elements_w_Electronegativity_PubChem">Electronegativity</option>
-                <option value = "Periodic_Table_of_Elements_w_Atomic_Radius_PubChem">Atomic Radius</option>
-                <option value = "Periodic_Table_of_Elements_w_Ionization_Energy_PubChem">Ionization Energy</option>
-                <option value = "Periodic_Table_of_Elements_w_Electron_Affinity_PubChem">Electrion Affinity</option>
-                <option value = "Periodic_Table_of_Elements_w_Melting_Point_PubChem">Melting Point</option>
-                <option value = "Periodic_Table_of_Elements_w_Boiling_Point_PubChem">Boiling Point</option>
-                <option value = "Periodic_Table_of_Elements_w_Density_PubChem">Density</option>
-                <option value = "Periodic_Table_of_Elements_w_Year_Discovered_PubChem">Year Discovered</option>
+            <label for = "periodictables" id = "dropdown" name = "myDropdown" >Sort By:</label>
+            <select name = "periodictables1" id = "periodictables" onchange="switchImage()">
+                <option value = "0">Chemical Group Block</option>
+                <option value = "1">Standard State</option>
+                <option value = "2">Atomic Mass</option>
+                <option value = "3">Electron Configuration</option>
+                <option value = "4">Oxidation States</option>
+                <option value = "5">Electronegativity</option>
+                <option value = "6">Atomic Radius</option>
+                <option value = "7">Ionization Energy</option>
+                <option value = "8">Electrion Affinity</option>
+                <option value = "9">Melting Point</option>
+                <option value = "10">Boiling Point</option>
+                <option value = "11">Density</option>
+                <option value = "12">Year Discovered</option>
             </select>
         </div>
-        <img id = "periodictable" src = "../img/Periodic Tables/Periodic_Table_of_Elements_w_Chemical_Group_Block_PubChem.png" alt = "Periodc Table of Elements">
+        <img id = "periodictable" name = "myImage" src = "../img/Periodic Tables/Periodic_Table_of_Elements_w_Chemical_Group_Block_PubChem.png" alt = "Periodc Table of Elements">
         <script src = "../js/periodic-table.js"></script>
     </body>
 </html>
