@@ -8,7 +8,8 @@ $top-bar-height: 0vh;
 body {
     margin: 0px;
     overflow: hidden;
-    color: rgba(0, 0, 0, 0.1);
+    color: rgba(255, 255, 255, 0.75);
+    user-select: none;
 }
 
 #section-container {
@@ -61,7 +62,7 @@ $section-width: 60%;
     width: 5vw;
     height: 5vw;
     align-self: center;
-    filter: opacity(50%);
+    filter: invert(100%) opacity(75%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -83,7 +84,7 @@ $section-width: 60%;
 }
 
 #biology-section {
-    background-image: linear-gradient(#{bio.$biology-color2}, #{bio.$biology-color3});
+    background-image: linear-gradient(#{bio.$biology-color3}, #{bio.$biology-color4});
     & .section-icon {
         background-image: url(../img/biology-icon.png);
     }
