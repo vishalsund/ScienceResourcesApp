@@ -18,3 +18,4 @@ function switchImage() {
     var chosen = selection.value;
     document.getElementById("periodictable").src = "../"+pictureList[chosen];
 };
+document.getElementById("title").onclick = () => window.location.href = "./home.html";
