@@ -1,0 +1,5 @@
+let quizData = [
+    ["ammonium", "acetate", "bicarbonate/hydrogen carbonate", "bisulfate/hydrogen sulfate", "perbromate", "bromate", "perchlorate", "chlorate", "chlorite", "hypochlorite", "cyanide", "dihydrogen phosphate", "hydroxide", "iodate", "nitrate", "nitrite", "permanganate", "carbonate", "chromate", "dichromate", "oxalate", "peroxide", "selenate", "silicate", "sulfate", "sulfite", "arsenate", "borate", "phosphate", "phosphite"],
+    ["NH₄⁺", "C₂H₃O₂⁻", "HCO₃⁻", "HSO₄⁻", "BrO₄⁻", "BrO₃⁻", "ClO₄⁻", "ClO₃⁻", "ClO₂⁻", "ClO⁻", "CN⁻", "H₂PO₄⁻", "OH⁻", "IO₃⁻", "NO₃⁻", "NO₂⁻", "MnO₄⁻", "CO₃²⁻", "CrO₄²⁻", "Cr₂O₇²⁻", "C₂O₄²⁻", "O₂²⁻", "SeO₄²⁻", "SiO₃²⁻", "SO₄²⁻", "SO₃²⁻", "AsO₄³⁻", "BO₃³⁻", "PO₄³⁻", "PO₃³⁻"]
+]
+document.getElementById("title").onclick = () => window.location.href = "./polyatomic-ions.html";

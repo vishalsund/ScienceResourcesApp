@@ -1,0 +1,33 @@
+@use "../base.scss";
+@use "../themes/chemistry.scss" as chem;
+
+body{
+    background-color:  #{chem.$color3};
+    color:white;
+    font-family: Consolas, 'Courier New', monospace;
+}
+#title{
+    color:white;
+    font-size: 500%;
+    text-align: center;
+    margin-top: 1.5%;
+    transition: all .5s;
+    &:hover {
+        transform: scale(1.05);
+    }
+    font-family: Consolas, 'Courier New', monospace;
+}
+.answer{
+    font-family: Consolas, 'Courier New', monospace;
+}
+
+#question{
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: large;
+}
+#score{
+    margin-top: 2vh;
+    margin-left: 2vw;
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 300%;
+}

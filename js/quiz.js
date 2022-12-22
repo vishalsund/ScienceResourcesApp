@@ -7,7 +7,7 @@ const scoreObj = document.getElementById("score")
 
 function scoreUpdate()
 {
-    scoreObj.innerHTML = score
+    scoreObj.innerHTML = "Score: "+score;
 }
 
 

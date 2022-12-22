@@ -1,0 +1,72 @@
+body {
+  overflow-x: hidden;
+  font-family: Consolas, "Courier New", monospace;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --color1: #03045E;
+  --color2: #023E8A;
+  --color3: #0077B6;
+  --color4: #00B4D8;
+  --color5: #ADE8F4;
+}
+
+body {
+  background-image: linear-gradient(#0077B6, #00B4D8);
+}
+
+#image {
+  box-shadow: 0 4px 6px #000000;
+  border-radius: 7.5%;
+  width: 50vw;
+  margin-left: 25vw;
+  margin-bottom: 5vh;
+}
+
+#title {
+  color: white;
+  font-size: 500%;
+  text-align: center;
+  margin-top: 1.5%;
+  transition: all 0.5s;
+}
+#title:hover {
+  transform: scale(1.05);
+}
+
+#subtitle {
+  color: white;
+  font-size: 250%;
+  text-align: center;
+}
+
+.button {
+  color: white;
+  font-size: large;
+  font-family: Consolas, "Courier New", monospace;
+  border-style: solid;
+  width: 10vw;
+  height: 7.5vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  border-radius: 1vh;
+  border-color: white;
+  background-color: #00B4D8;
+  transition: all 0.5s;
+}
+.button:hover {
+  transform: scale(1.05);
+}
+
+#ions-quiz-button {
+  margin-left: 25vw;
+  margin-right: 10vw;
+}
+
+#metals-quiz-button {
+  margin-right: 10vw;
+}

@@ -3,6 +3,10 @@ body {
   font-family: Consolas, "Courier New", monospace;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background-image: linear-gradient(var(--color3), var(--color4));
   background-position: center;
@@ -43,9 +47,6 @@ body {
 .section:hover {
   transform: scale(1.03);
   background-color: rgba(255, 255, 255, 0.205);
-}
-.section .icon {
-  background-image: url("../img/periodic-table-icon");
 }
 
 .section-title {

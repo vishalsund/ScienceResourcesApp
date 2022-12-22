@@ -3,6 +3,10 @@ body {
   font-family: Consolas, "Courier New", monospace;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
   --color1: #003a1d;
   --color2: #006100;
