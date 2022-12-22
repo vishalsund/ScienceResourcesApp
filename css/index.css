@@ -3,6 +3,10 @@ body {
   font-family: Consolas, "Courier New", monospace;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
   --color1: #003a1d;
   --color2: #006100;
@@ -29,71 +33,108 @@ body {
 }
 
 body {
-  margin: 0px;
   overflow: hidden;
-  color: rgba(255, 255, 255, 0.75);
-  user-select: none;
+  margin: 0px;
+  color: rgba(0, 0, 0, 0.377);
 }
 
 #section-container {
-  width: 100vw;
-  height: calc(100vh - 0vh);
-  flex-direction: row;
-  display: flex;
+  display: inline-flex;
 }
 
 .section {
-  flex: 1;
+  width: 33.3333333333vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   transition: all 0.5s;
 }
 .section:hover {
   z-index: 10;
-  transform: scale(1.1);
+  transform: scaleX(1.1);
 }
-.section-content {
-  position: relative;
-  margin: 0px;
-  width: 60%;
-  height: 60%;
-  left: calc(( 100% - 60% ) / 2);
-  top: calc(( 100% - 60% ) / 2);
-  transition: all 0.5s;
-  display: flex;
-  flex-direction: column;
+.section.selected {
+  z-index: 15;
+  transform: scaleX(3);
+}
+.section.selected#chem-section {
+  translate: -33.3333333333vw 0 0;
+}
+.section.selected#bio-section {
+  translate: 33.3333333333vw 0 0;
 }
 
 .section-title {
-  font-size: 300%;
+  user-select: none;
+  transition: all 0.5s;
   text-align: center;
+  margin-top: 4%;
+  font-size: 300%;
+  color: rgba(0, 0, 0, 0.377);
+}
+.section-title:hover {
+  scale: 1.1;
+}
+.selected .section-title {
+  transform: scaleX(0.3333333333);
+  margin-top: 5%;
+  font-size: 500%;
 }
 
-.section-icon {
-  width: 5vw;
-  height: 5vw;
-  align-self: center;
-  filter: invert(100%) opacity(75%);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.sub-sect-container {
+  opacity: 0%;
+  position: absolute;
+  width: 70%;
+  left: 15%;
+  top: 30%;
+  transition: all 0.5s;
+}
+.selected .sub-sect-container {
+  opacity: 100%;
+  transform: scaleX(0.3333333333);
+  width: 70vw;
+  left: calc(50% - 35vw);
 }
 
-#chemistry-section {
+.sub-sect {
+  font-size: 300%;
+  width: 100%;
+  height: 15vh;
+  border-radius: 2vh;
+  margin-bottom: 3vh;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+}
+.sub-sect:hover {
+  transform: scale(1.03);
+  background-color: rgba(255, 255, 255, 0.205);
+}
+
+.sub-sect-title {
+  position: absolute;
+  left: 10%;
+  flex: 1;
+}
+
+#chem-section {
   background-image: linear-gradient(#0077B6, #00B4D8);
 }
-#chemistry-section .section-icon {
+#chem-section .section-icon {
   background-image: url(../img/chem-icon.png);
 }
 
-#physics-section {
+#phy-section {
   background-image: linear-gradient(#FF7900, #ff9a42);
 }
-#physics-section .section-icon {
+#phy-section .section-icon {
   background-image: url(../img/physics-icon.png);
 }
 
-#biology-section {
+#bio-section {
   background-image: linear-gradient(#008b00, #38B000);
 }
-#biology-section .section-icon {
+#bio-section .section-icon {
   background-image: url(../img/biology-icon.png);
 }

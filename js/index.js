@@ -1,11 +1,34 @@
-document.getElementById("chemistry-section").onclick = () => {
-    window.location.href = "./chemistry/home.html"
+let pickedSection
+
+const chemSect = document.getElementById("chem-section")
+const bioSect = document.getElementById("bio-section")
+const phySect = document.getElementById("phy-section")
+
+function swap(div)
+{
+    div.onclick = () => {
+        if (pickedSection)
+            pickedSection.classList.remove("selected")
+    
+        if (pickedSection == div)
+        {   
+            pickedSection = null
+        } else {
+            div.classList.add("selected")
+            pickedSection = div
+        }
+    }
 }
 
-document.getElementById("biology-section").onclick = () => {
-    window.location.href = "./biology/home.html"
-}
+swap(chemSect)
+swap(bioSect)
+swap(phySect)
 
-document.getElementById("physics-section").onclick = () => {
-    window.location.href = "./physics/home.html"
+const subSects = document.getElementsByClassName("sub-sect")
+for (let i = 0; i < subSects.length; i++)
+{
+    // subSects.item(i)
+    subSects.item(i).onclick = () => {
+        window.location.href = subSects.item(i).dataset.link
+    }
 }

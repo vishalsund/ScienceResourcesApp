@@ -1,0 +1,92 @@
+@use "base.scss";
+@use "themes/biology.scss" as bio;
+@use "themes/chemistry.scss" as chem;
+@use "themes/physics.scss" as phy;
+
+$top-bar-height: 0vh;
+
+body {
+    margin: 0px;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.75);
+    user-select: none;
+}
+
+#section-container {
+    width: 100vw;
+    height: calc(100vh - #{$top-bar-height});
+
+    flex-direction: row;
+    display: flex;
+}
+
+.section {
+    flex: 1;
+    transition: all .5s;
+
+    &:hover {
+        z-index: 10;
+        transform: scale(1.1);
+        & .section-content {
+            
+        }
+    }
+}
+
+$section-height: 60%;
+$section-width: 60%;
+.section-content {
+    // transform-origin: 50% 50%;
+    position: relative;
+    margin: 0px;
+
+    width: #{$section-width};
+    height: #{$section-height};
+
+    left: calc(( 100% - #{$section-width} ) / 2);
+    top: calc(( 100% - #{$section-height} ) / 2);
+
+    transition: all .5s;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    font-size: 300%;
+    text-align: center;
+    // color: wheat;
+}
+
+.section-icon {
+    width: 5vw;
+    height: 5vw;
+    align-self: center;
+    filter: invert(100%) opacity(75%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#chemistry-section {
+    // width: 33%;
+    background-image: linear-gradient(#{chem.$chemistry-color2}, #{chem.$chemistry-color3});
+    & .section-icon {
+        background-image: url(../img/chem-icon.png);
+    }
+}
+
+#physics-section {
+    background-image: linear-gradient(#{phy.$physics-color2}, #{phy.$physics-color3});
+    & .section-icon {
+        background-image: url(../img/physics-icon.png);
+    }
+}
+
+#biology-section {
+    background-image: linear-gradient(#{bio.$color3}, #{bio.$color4});
+    & .section-icon {
+        background-image: url(../img/biology-icon.png);
+    }
+}
+

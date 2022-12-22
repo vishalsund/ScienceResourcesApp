@@ -1,35 +1,40 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="css/index.css">
-        <title>Science Resources</title>
-    </head>
-    <body>
-        <!-- <div id="top-bar">
-            <div id="top-bar-title">Science Resources</div>
-        </div> -->
-
-        <div id="section-container">
-            <div id="chemistry-section" class="section">
-                <div class="section-content">
-                    <div class="section-title">Chemistry</div>
-                    <div class="section-icon"></div>
-                </div>
-            </div>
-            <div id="physics-section" class="section">
-                <div class="section-content">
-                    <div class="section-title">Physics</div>
-                    <div class="section-icon"></div>
-                </div>
-            </div>
-            <div id="biology-section" class="section">
-                <div class="section-content">
-                    <div class="section-title">Biology</div>
-                    <div class="section-icon"></div>
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Science Resources</title>
+</head>
+<body>
+    <div id="section-container">
+        <div id="bio-section" class="section">
+            <div class="section-title">Biology</div>
+            <div class="sub-sect-container">
+                <div class="sub-sect"><div class="sub-sect-title">Genetics</div></div>
+                <div class="sub-sect"><div class="sub-sect-title">The Cell</div></div>
+                <div class="sub-sect"><div class="sub-sect-title">DNA</div></div>
             </div>
         </div>
+        <div id="phy-section" class="section">
+            <div class="section-title">Physics</div>
+            <div class="sub-sect-container">
+                <div class="sub-sect"><div class="sub-sect-title">Kinematics Simulator</div></div>
+                <div class="sub-sect"><div class="sub-sect-title">Electricity Simulator</div></div>
+                <div class="sub-sect"><div class="sub-sect-title">Graphing Calculator</div></div>
+            </div>
+        </div>
+        <div id="chem-section" class="section">
+            <div class="section-title">Chemistry</div>
+            <div class="sub-sect-container">
+                <div class="sub-sect" data-link="./periodic-table.html"><div class="sub-sect-title">Periodic Table</div></div>
+                <div class="sub-sect" data-link="./polyatomic-ions.html"><div class="sub-sect-title">Compounds</div></div>
+                <div class="sub-sect"><div class="sub-sect-title">Polyatomic Ions</div></div>
+            </div>
+        </div>
+    </div>
 
-        <script src="./js/index.js"></script>
-    </body>
-
+    <script src="./js/index.js"></script>
+</body>
 </html>
