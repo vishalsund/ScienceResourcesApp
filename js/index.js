@@ -4,6 +4,30 @@ const chemSect = document.getElementById("chem-section")
 const bioSect = document.getElementById("bio-section")
 const phySect = document.getElementById("phy-section")
 
+function quickSwitch(section)
+{
+    pickedSection = section;
+    section.classList.add("inst")
+    section.classList.add("selected")
+
+    setTimeout(() => {
+        section.classList.remove("inst")
+    }, 100)
+}
+
+switch(window.location.hash)
+{
+    case "#chemistry":
+        quickSwitch(chemSect)
+        break;
+    case "#physics":
+        quickSwitch(phySect)
+        break;
+    case "#biology":
+        quickSwitch(bioSect)
+        break;
+}
+
 let inAnim = false
 let animId = 0
 
@@ -23,6 +47,7 @@ function swap(div)
         }
         animId++;
         let currentAnim = animId
+
 
         setTimeout(() =>{
             if (animId == currentAnim)

@@ -1,4 +1,12 @@
 body {
+  background-image: linear-gradient(var(--color3), var(--color4));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body {
   overflow-x: hidden;
   font-family: Consolas, "Courier New", monospace;
 }
@@ -21,4 +29,13 @@ body::-webkit-scrollbar {
 
 .inst {
   transition: all 0s !important;
+}
+
+#sim-container {
+  position: absolute;
+  width: 60vw;
+  height: 60vh;
+  top: calc(50% - 30vh);
+  left: calc(50% - 30vw);
+  background-color: red;
 }

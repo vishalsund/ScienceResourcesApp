@@ -1,0 +1,7 @@
+body {
+  background-image: linear-gradient(var(--color3), var(--color4));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}

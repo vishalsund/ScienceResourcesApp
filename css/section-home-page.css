@@ -7,6 +7,22 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+#title {
+  color: rgba(0, 0, 0, 0.377);
+  font-size: 500%;
+  text-align: center;
+  margin-top: 1.5%;
+  user-select: none;
+  transition: all 0.5s;
+}
+#title:hover {
+  scale: 1.05;
+}
+
+.inst {
+  transition: all 0s !important;
+}
+
 body {
   background-image: linear-gradient(var(--color3), var(--color4));
   background-position: center;

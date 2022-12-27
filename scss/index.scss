@@ -44,7 +44,7 @@ body {
 
 .section-title {
     user-select: none;
-    transition: all .5s;
+    transition: inherit;
     text-align: center;
     margin-top: 4%;
     font-size: 300%;
@@ -88,7 +88,7 @@ body {
 
     margin-bottom: 3vh;
 
-    transition: all .5s;
+    transition: inherit;
     &:hover {
         transform: scale(1.03);
         background-color: rgba(255, 255, 255, 0.205);
