@@ -34,4 +34,3 @@ function compileDir(dir)
 
 
 compileDir()
-// sass.render()

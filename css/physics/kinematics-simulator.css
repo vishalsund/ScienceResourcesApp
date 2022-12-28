@@ -37,5 +37,67 @@ body::-webkit-scrollbar {
   height: 60vh;
   top: calc(50% - 30vh);
   left: calc(50% - 30vw);
-  background-color: red;
+  border-color: rgba(0, 0, 0, 0.377);
+  border-width: 1vh;
+  border-style: solid;
+}
+
+#play-sim-button {
+  background-image: url("../../img/play-button.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: opacity(0.377);
+  position: absolute;
+  width: 10vh;
+  height: 10vh;
+  transition: all 0.5s;
+}
+#play-sim-button:hover {
+  scale: 1.1;
+}
+
+.car {
+  position: absolute;
+  width: 7vh;
+  height: 7vh;
+  left: -3.5vh;
+  top: -3.5vh;
+  background-color: rgba(0, 0, 0, 0.377);
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.car-pos {
+  user-select: none;
+  color: rgba(0, 0, 0, 0.377);
+  font-size: 125%;
+  text-align: center;
+  width: 10vh;
+  translate: -1.5vh -7.5vh;
+  top: -10vh;
+}
+
+.car-vel {
+  user-select: none;
+  color: rgba(0, 0, 0, 0.377);
+  font-size: 125%;
+  text-align: center;
+  width: 10vh;
+  translate: -1.5vh -7.5vh;
+  top: -7vh;
+}
+
+.car-acc {
+  user-select: none;
+  color: rgba(0, 0, 0, 0.377);
+  font-size: 125%;
+  text-align: center;
+  width: 10vh;
+  translate: -1.5vh -7.5vh;
+  top: -4vh;
+}
+
+#acc-sim-car {
+  translate: 10vw 30vh;
 }

@@ -11,7 +11,16 @@
     <body>
         <div id="title">Kinematics Simulator</div>
         <div id="sim-container">
-
+            <div id="play-sim-button"></div>
+            <div class="sim" id="acceleration-sim">
+                <div class="car" id="acc-sim-car">
+                    <div class="car-acc" id="acc-sim-acc-label">10m/s²</div>
+                    <!-- <div class="car-vel" id="acc-sim-vel-label">0m/s</div>
+                    <div class="car-pos" id="acc-sim-pos-label">0m</div> -->
+                </div>
+                <div class="v-target-line" id="acc-sim-line"></div>
+                <div class="label" id="acc-sim-distance-label"></div>
+            </div>
         </div>
         <script src="../js/physics/kinematics-simulator.js"></script>
     </body>

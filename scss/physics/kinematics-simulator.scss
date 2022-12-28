@@ -1,5 +1,5 @@
 @use "../background.scss";
-@use "../base.scss";
+@use "../base.scss" as *;
 
 $container-height: 60vh;
 $container-width: 60vw;
@@ -10,9 +10,75 @@ $container-width: 60vw;
     top: calc(50% - $container-height /2);
     left: calc(50% - $container-width / 2);
 
-    background-color: red;
+    border-color: $title-color;
+    border-width: 1vh;
+    border-style: solid;
 }
 
 .sim {
 
+}
+
+$play-button-size: 10vh;
+#play-sim-button {
+    background-image: url("../../img/play-button.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-attachment: fixed;
+
+    filter: opacity(.377);
+
+    position: absolute;
+    width: $play-button-size;
+    height: $play-button-size;
+    // left: calc(100% - $play-button-size);
+
+    transition: all .5s;
+    &:hover {
+        scale: 1.1;
+    }
+}
+
+.car {
+    position: absolute;
+    width: 7vh;
+    height: 7vh;
+
+    left: -3.5vh;
+    top: -3.5vh;
+
+    background-color: $title-color;
+
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@mixin car-label {
+    user-select: none;
+    color: $title-color;
+    // position: absolute;
+    font-size: 125%;
+    text-align: center;
+    width: 10vh;
+
+    translate: -1.5vh -7.5vh;
+}
+
+.car-pos {
+    @include car-label;
+    top: -10vh;
+}
+.car-vel {
+    @include car-label;
+    top: -7vh;
+}
+.car-acc {
+    @include car-label;
+    top: -4vh;
+}
+
+// Acceleration sim
+#acc-sim-car {
+    translate: 10vw calc($container-height / 2);
 }
