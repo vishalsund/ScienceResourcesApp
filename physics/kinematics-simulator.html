@@ -10,15 +10,25 @@
     </head>
     <body>
         <div id="title">Kinematics Simulator</div>
-        <div id="sim-container">
+        <div id="sim-container" data-sim="" data-pos data-vel>
             <div id="play-sim-button"></div>
             <div class="sim" id="acceleration-sim">
+
+                <!-- Car -->
                 <div class="car" id="acc-sim-car">
-                    <div class="car-acc" id="acc-sim-acc-label">10m/s²</div>
-                    <!-- <div class="car-vel" id="acc-sim-vel-label">0m/s</div>
-                    <div class="car-pos" id="acc-sim-pos-label">0m</div> -->
+                    <div class="label-container">
+                        <div class="acc-label" id="acc-sim-acc-label">10</div>
+                        <div class="vel-label" id="acc-sim-vel-label">0</div>
+                        <div class="pos-label" id="acc-sim-pos-label">0</div>
+                    </div>
                 </div>
-                <div class="v-target-line" id="acc-sim-line"></div>
+
+                <!-- Target Line -->
+                <div class="v-target-line" id="acc-sim-line">
+                    <div class="pos-label" id="acc-sim-pos-label">10</div>
+                </div>
+
+                <!-- Distance Label -->
                 <div class="label" id="acc-sim-distance-label"></div>
             </div>
         </div>

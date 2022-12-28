@@ -40,6 +40,19 @@ $play-button-size: 10vh;
     }
 }
 
+@mixin has-label {
+    display: flex;
+}
+
+.label-container {
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: column-reverse;
+    translate: 50%;
+}
+
 .car {
     position: absolute;
     width: 7vh;
@@ -50,8 +63,7 @@ $play-button-size: 10vh;
 
     background-color: $title-color;
 
-    display: flex;
-    flex-direction: column-reverse;
+    @include has-label();
 }
 
 @mixin car-label {
@@ -62,23 +74,46 @@ $play-button-size: 10vh;
     text-align: center;
     width: 10vh;
 
-    translate: -1.5vh -7.5vh;
+    translate: calc(-50%) -7.5vh;
 }
 
-.car-pos {
+.pos-label {
     @include car-label;
+    &::after {
+        content: "m"
+    }
+}
+
+.vel-label {
+    @include car-label;
+    &::after {
+        content: "m/s"
+    }
+}
+.acc-label {
+    @include car-label;
+    &::after {
+        content: "m/s²"
+    }
+}
+
+.v-target-line {
+    position: absolute;
+    width: 0.1vh;
+    height: 20vh;
+
+    left: -0.05vh ;
     top: -10vh;
-}
-.car-vel {
-    @include car-label;
-    top: -7vh;
-}
-.car-acc {
-    @include car-label;
-    top: -4vh;
+    background-color: $title-color;
+
+    @include has-label();
 }
 
 // Acceleration sim
 #acc-sim-car {
     translate: 10vw calc($container-height / 2);
+}
+
+#acc-sim-line {
+    translate: 50vw calc($container-height / 2);
 }

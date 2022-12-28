@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-image: linear-gradient(var(--color3), var(--color4));
   background-position: center;
@@ -57,6 +58,15 @@ body::-webkit-scrollbar {
   scale: 1.1;
 }
 
+.label-container {
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  display: flex;
+  flex-direction: column-reverse;
+  translate: 50%;
+}
+
 .car {
   position: absolute;
   width: 7vh;
@@ -65,39 +75,58 @@ body::-webkit-scrollbar {
   top: -3.5vh;
   background-color: rgba(0, 0, 0, 0.377);
   display: flex;
-  flex-direction: column-reverse;
 }
 
-.car-pos {
+.pos-label {
   user-select: none;
   color: rgba(0, 0, 0, 0.377);
   font-size: 125%;
   text-align: center;
   width: 10vh;
-  translate: -1.5vh -7.5vh;
+  translate: -50% -7.5vh;
+}
+.pos-label::after {
+  content: "m";
+}
+
+.vel-label {
+  user-select: none;
+  color: rgba(0, 0, 0, 0.377);
+  font-size: 125%;
+  text-align: center;
+  width: 10vh;
+  translate: -50% -7.5vh;
+}
+.vel-label::after {
+  content: "m/s";
+}
+
+.acc-label {
+  user-select: none;
+  color: rgba(0, 0, 0, 0.377);
+  font-size: 125%;
+  text-align: center;
+  width: 10vh;
+  translate: -50% -7.5vh;
+}
+.acc-label::after {
+  content: "m/s²";
+}
+
+.v-target-line {
+  position: absolute;
+  width: 0.1vh;
+  height: 20vh;
+  left: -0.05vh;
   top: -10vh;
-}
-
-.car-vel {
-  user-select: none;
-  color: rgba(0, 0, 0, 0.377);
-  font-size: 125%;
-  text-align: center;
-  width: 10vh;
-  translate: -1.5vh -7.5vh;
-  top: -7vh;
-}
-
-.car-acc {
-  user-select: none;
-  color: rgba(0, 0, 0, 0.377);
-  font-size: 125%;
-  text-align: center;
-  width: 10vh;
-  translate: -1.5vh -7.5vh;
-  top: -4vh;
+  background-color: rgba(0, 0, 0, 0.377);
+  display: flex;
 }
 
 #acc-sim-car {
   translate: 10vw 30vh;
+}
+
+#acc-sim-line {
+  translate: 50vw 30vh;
 }
