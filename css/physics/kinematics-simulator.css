@@ -50,12 +50,20 @@ body::-webkit-scrollbar {
   background-size: cover;
   filter: opacity(0.377);
   position: absolute;
-  width: 10vh;
-  height: 10vh;
-  transition: all 0.5s;
+  width: 7vh;
+  height: 7vh;
+  left: 1vh;
+  top: 1vh;
+  transition: scale 0.5s;
 }
 #play-sim-button:hover {
   scale: 1.1;
+}
+#play-sim-button[data-state=paused] {
+  background-image: url("../../img/circled-pause.png");
+}
+#play-sim-button[data-state=replay] {
+  background-image: url("../../img/replay.png");
 }
 
 .label-container {

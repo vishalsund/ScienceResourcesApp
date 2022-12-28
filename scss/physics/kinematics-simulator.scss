@@ -19,7 +19,7 @@ $container-width: 60vw;
 
 }
 
-$play-button-size: 10vh;
+$play-button-size: 7vh;
 #play-sim-button {
     background-image: url("../../img/play-button.png");
     background-position: center;
@@ -32,11 +32,19 @@ $play-button-size: 10vh;
     position: absolute;
     width: $play-button-size;
     height: $play-button-size;
-    // left: calc(100% - $play-button-size);
+    left: 1vh;
+    top: 1vh;
 
-    transition: all .5s;
+    transition: scale .5s;
     &:hover {
         scale: 1.1;
+    }
+
+    &[data-state="paused"] {
+        background-image: url("../../img/circled-pause.png");
+    }
+    &[data-state="replay"] {
+        background-image: url("../../img/replay.png");
     }
 }
 

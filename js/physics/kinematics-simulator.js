@@ -26,9 +26,38 @@ function deltaTime()
     return d
 }
 
+const playButton = document.getElementById("play-sim-button")
+
+let firstPlay = true
+let inAnim = false
+let paused = false
+
+function updateButton()
+{
+    if (firstPlay)
+    {
+       playButton.dataset.state = "play"
+    } else if(inAnim) {
+        if (paused) 
+            playButton.dataset.state = "play"
+        else 
+            playButton.dataset.state = "paused"
+    } else {paused
+        playButton.dataset.state = "replay"
+    }
+}
+
+function togglePause()
+{
+    paused = !paused
+    updateButton()
+}
+
+updateButton()
+
 // Acceleration Sim
+let sims = {};
 (() => {
-    const playButton = document.getElementById("play-sim-button")
 
     const accLabel = document.getElementById("acc-sim-acc-label")
     const velLabel = document.getElementById("acc-sim-vel-label")
@@ -41,7 +70,6 @@ function deltaTime()
     let initialVelocity = 0
     let acceleration = 2
     let targetPos = 10
-
     let pos = initialPos
     let velocity = initialVelocity
 
@@ -52,15 +80,20 @@ function deltaTime()
         posLabel.innerHTML = digits(pos, 2)
     }
 
-    let startTime
+    let elaspsedTime
 
     function update()
     {
         let dt = deltaTime()
+        if (paused) {
+            requestAnimationFrame(update)
+            return
+        }
 
-        let t = (new Date().getTime()-startTime)/1000
-        pos = Math.min(changeX(initialVelocity, acceleration, t), targetPos)
-        velocity = getVel(initialVelocity, acceleration, t)
+        elaspsedTime += dt
+
+        pos = Math.min(changeX(initialVelocity, acceleration, elaspsedTime), targetPos)
+        velocity = getVel(initialVelocity, acceleration, elaspsedTime)
 
         updateVars()
         let alpha = Math.min(pos / targetPos, 1)
@@ -69,11 +102,25 @@ function deltaTime()
 
         if (alpha < 1)
             requestAnimationFrame(update)
+        else  {
+            inAnim = false
+            updateButton()
+        }
     }
 
-    playButton.onclick = () => {
-        console.log("play")
-        startTime = new Date().getTime()
+    sims.acceleration = () => {
+        elaspsedTime = 0
         update()
     }
 })()
+
+playButton.onclick = () => {
+    if (!inAnim) {
+        inAnim = true
+        firstPlay = false
+        updateButton()
+        sims.acceleration()
+    } else {
+        togglePause()
+    }
+}
