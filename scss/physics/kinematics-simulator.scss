@@ -1,5 +1,16 @@
 @use "../background.scss";
 @use "../base.scss" as *;
+@use "../themes/physics.scss" as *;
+
+#simulation-selection {
+    border-style: none;
+    user-select: none;
+    color: $title-color;
+    background-color: $color3;
+    font-size: 150%;
+
+    appearance: none;
+}
 
 $container-height: 60vh;
 $container-width: 60vw;
@@ -90,6 +101,11 @@ $play-button-size: 7vh;
     &::after {
         content: "m"
     }
+
+    visibility: hidden;
+    #sim-container[data-pos="true"] & {
+        visibility: visible;
+    }
 }
 
 .vel-label {
@@ -97,11 +113,21 @@ $play-button-size: 7vh;
     &::after {
         content: "m/s"
     }
+
+    visibility: hidden;
+    #sim-container[data-vel="true"] & {
+        visibility: visible;
+    }
 }
 .acc-label {
     @include car-label;
     &::after {
         content: "m/s²"
+    }
+
+    visibility: hidden;
+    #sim-container[data-acc="true"] & {
+        visibility: visible;
     }
 }
 
@@ -118,6 +144,13 @@ $play-button-size: 7vh;
 }
 
 // Acceleration sim
+#acceleration-sim {
+    visibility: hidden;
+    #sim-container[data-sim="acceleration"] & {
+        visibility: visible;
+    }   
+}
+
 #acc-sim-car {
     translate: 10vw calc($container-height / 2);
 }

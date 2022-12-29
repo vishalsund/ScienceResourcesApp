@@ -32,6 +32,24 @@ body::-webkit-scrollbar {
   transition: all 0s !important;
 }
 
+:root {
+  --color1: #FF4800;
+  --color2: #FF6000;
+  --color3: #FF7900;
+  --color4: #ff9a42;
+  --color5: #fc9b47;
+  --color6: #f3cba9;
+}
+
+#simulation-selection {
+  border-style: none;
+  user-select: none;
+  color: rgba(0, 0, 0, 0.377);
+  background-color: #FF7900;
+  font-size: 150%;
+  appearance: none;
+}
+
 #sim-container {
   position: absolute;
   width: 60vw;
@@ -129,6 +147,13 @@ body::-webkit-scrollbar {
   top: -10vh;
   background-color: rgba(0, 0, 0, 0.377);
   display: flex;
+}
+
+#acceleration-sim {
+  visibility: hidden;
+}
+#sim-container[data-sim=acceleration] #acceleration-sim {
+  visibility: visible;
 }
 
 #acc-sim-car {

@@ -10,10 +10,20 @@
     </head>
     <body>
         <div id="title">Kinematics Simulator</div>
-        <div id="sim-container" data-sim="" data-pos data-vel>
+        <select id="simulation-selection">
+            <option value="acceleration">acceleration</option>
+            <option value="test1">test1</option>
+            <option value="test2">test2</option>
+            <option value="test3">test3</option>
+        </select>
+        <div id="data-visibility">
+            <div id="pos-toggle" class="togle-button"><div class="toggle-center"></div></div>
+            <div id="vel-toggle" class="togle-button"><div class="toggle-center"></div></div>
+            <div id="acc-toggle" class="togle-button"><div class="toggle-center"></div></div>
+        </div>
+        <div id="sim-container" data-sim="acceleration" data-pos="true" data-vel="true" data-acc="true">
             <div id="play-sim-button"></div>
             <div class="sim" id="acceleration-sim">
-
                 <!-- Car -->
                 <div class="car" id="acc-sim-car">
                     <div class="label-container">

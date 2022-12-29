@@ -27,6 +27,7 @@ function deltaTime()
 }
 
 const playButton = document.getElementById("play-sim-button")
+const simContainer = document.getElementById("sim-container")
 
 let firstPlay = true
 let inAnim = false
@@ -114,10 +115,18 @@ let sims = {};
     }
 })()
 
+let activeSim = "acceleration"
+const simSelection = document.getElementById("simulation-selection")
+simSelection.onchange = () => {
+    activeSim = simSelection.value
+    simContainer.dataset.sim = activeSim
+}
+
 playButton.onclick = () => {
     if (!inAnim) {
         inAnim = true
         firstPlay = false
+        deltaTime()
         updateButton()
         sims.acceleration()
     } else {
