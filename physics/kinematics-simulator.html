@@ -17,9 +17,18 @@
             <option value="test3">test3</option>
         </select>
         <div id="data-visibility">
-            <div id="pos-toggle" class="togle-button"><div class="toggle-center"></div></div>
-            <div id="vel-toggle" class="togle-button"><div class="toggle-center"></div></div>
-            <div id="acc-toggle" class="togle-button"><div class="toggle-center"></div></div>
+            <div class="toggle-label">
+                <div>Position</div>
+                <div id="pos-toggle" class="toggle-button" data-toggle="true"><div class="toggle-center"></div></div>
+            </div>
+            <div class="toggle-label">
+                <div>Velocity</div>
+                <div id="vel-toggle" class="toggle-button" data-toggle="true"><div class="toggle-center"></div></div>
+            </div>
+            <div class="toggle-label">
+                <div>Acceleration</div>
+                <div id="acc-toggle" class="toggle-button" data-toggle="true"><div class="toggle-center"></div></div>
+            </div>
         </div>
         <div id="sim-container" data-sim="acceleration" data-pos="true" data-vel="true" data-acc="true">
             <div id="play-sim-button"></div>

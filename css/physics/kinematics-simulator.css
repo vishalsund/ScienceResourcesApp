@@ -61,6 +61,41 @@ body::-webkit-scrollbar {
   border-style: solid;
 }
 
+#data-visibility {
+  position: absolute;
+  top: 40%;
+  left: 3vh;
+}
+
+.toggle-label {
+  display: flex;
+  flex-direction: row;
+  color: rgba(0, 0, 0, 0.377);
+}
+
+.toggle-button {
+  width: 3.5vh;
+  height: 3.5vh;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(0, 0, 0, 0.377);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1vh;
+  margin-left: 1vh;
+}
+
+.toggle-center {
+  width: 2.6vh;
+  height: 2.6vh;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.377);
+}
+.toggle-button[data-toggle=true] > .toggle-center {
+  visibility: visible;
+}
+
 #play-sim-button {
   background-image: url("../../img/play-button.png");
   background-position: center;
@@ -110,9 +145,13 @@ body::-webkit-scrollbar {
   text-align: center;
   width: 10vh;
   translate: -50% -7.5vh;
+  visibility: hidden;
 }
 .pos-label::after {
   content: "m";
+}
+#sim-container[data-pos=true] .pos-label {
+  visibility: visible;
 }
 
 .vel-label {
@@ -122,9 +161,13 @@ body::-webkit-scrollbar {
   text-align: center;
   width: 10vh;
   translate: -50% -7.5vh;
+  visibility: hidden;
 }
 .vel-label::after {
   content: "m/s";
+}
+#sim-container[data-vel=true] .vel-label {
+  visibility: visible;
 }
 
 .acc-label {
@@ -134,9 +177,13 @@ body::-webkit-scrollbar {
   text-align: center;
   width: 10vh;
   translate: -50% -7.5vh;
+  visibility: hidden;
 }
 .acc-label::after {
   content: "m/s²";
+}
+#sim-container[data-acc=true] .acc-label {
+  visibility: visible;
 }
 
 .v-target-line {

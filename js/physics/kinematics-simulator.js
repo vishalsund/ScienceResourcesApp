@@ -133,3 +133,30 @@ playButton.onclick = () => {
         togglePause()
     }
 }
+
+const posToggle = document.getElementById("pos-toggle")
+const velToggle = document.getElementById("vel-toggle")
+const accToggle = document.getElementById("acc-toggle")
+
+let posToggled = true
+let velToggled = true
+let accToggled = true
+
+posToggle.onclick = () => {
+    console.log("click")
+    posToggled = !posToggled
+    posToggle.dataset.toggle = posToggled
+    simContainer.dataset.pos = posToggled
+}
+
+velToggle.onclick = () => {
+    velToggled = !velToggled
+    velToggle.dataset.toggle = velToggled
+    simContainer.dataset.vel = velToggled
+}
+
+accToggle.onclick = () => {
+    accToggled = !accToggled
+    accToggle.dataset.toggle = accToggled
+    simContainer.dataset.acc = accToggled
+}
