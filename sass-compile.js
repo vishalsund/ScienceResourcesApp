@@ -1,8 +1,8 @@
 const sass = require('sass');
 const fs = require("fs")
 
-const readDir = "./scss"
-const writeDir = "./css"
+const readDir = "./public/scss"
+const writeDir = "./public/css"
 
 function getFileName(file)
 {
