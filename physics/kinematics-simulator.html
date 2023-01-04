@@ -16,18 +16,33 @@
             <option value="test2">test2</option>
             <option value="test3">test3</option>
         </select>
-        <div id="data-visibility">
-            <div class="toggle-label">
-                <div>Position</div>
-                <div id="pos-toggle" class="toggle-button" data-toggle="true"><div class="toggle-center"></div></div>
+        <div id="left-side">
+            <div id="data-toggles-label">Labels</div>
+            <div id="data-visibility">
+                <div class="toggle-label">
+                    <div>Position</div>
+                    <div id="pos-toggle" class="toggle-button" data-toggle="true"><div class="toggle-center"></div></div>
+                </div>
+                <div class="toggle-label">
+                    <div>Velocity</div>
+                    <div id="vel-toggle" class="toggle-button" data-toggle="true"><div class="toggle-center"></div></div>
+                </div>
+                <div class="toggle-label">
+                    <div>Acceleration</div>
+                    <div id="acc-toggle" class="toggle-button" data-toggle="true"><div class="toggle-center"></div></div>
+                </div>
             </div>
-            <div class="toggle-label">
-                <div>Velocity</div>
-                <div id="vel-toggle" class="toggle-button" data-toggle="true"><div class="toggle-center"></div></div>
-            </div>
-            <div class="toggle-label">
-                <div>Acceleration</div>
-                <div id="acc-toggle" class="toggle-button" data-toggle="true"><div class="toggle-center"></div></div>
+            <div id="data-toggles-label">Variables</div>
+            <div id="variables">
+                <div class="variable-container" data-var-name="distance">
+                    <div class="variable-label">Distance: </div>
+                    <input type="number" class="variable-input">
+                </div>
+
+                <div class="variable-container" data-var-name="acceleration">
+                    <div class="variable-label">Acceleration: </div>
+                    <input type="number" class="variable-input">
+                </div>
             </div>
         </div>
         <div id="sim-container" data-sim="acceleration" data-pos="true" data-vel="true" data-acc="true">

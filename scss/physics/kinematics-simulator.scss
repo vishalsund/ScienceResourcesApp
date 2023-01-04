@@ -30,10 +30,23 @@ $container-width: 60vw;
 
 }
 
-#data-visibility {
+#left-side {
+    // background-color: red;
     position: absolute;
-    top: 40%;
     left: 3vh;
+    top: calc(50% - $container-height /2);
+    width: calc(50% - $container-width / 2 - 6vh);
+    color: $title-color;
+}
+
+// #region Data Visiblity
+#data-visibility {
+    margin-bottom: 5vh;
+}
+
+#data-toggles-label {
+    margin-bottom: 2vh;
+    font-size: 3vh;
 }
 
 .toggle-label {
@@ -68,6 +81,36 @@ $toggle-button-size: 3.5vh;
     }
 }
 
+// #endregion
+
+// #region Variable Input
+
+#variables {
+    
+}
+
+.variable-container {
+    display: flex;
+    flex-direction: row;
+    color: $title-color;
+    margin-bottom: 1vh;
+}
+
+.variable-label {
+    margin-right: 1vh;
+}
+
+.variable-input {
+    position: absolute;
+    right: 10%;
+    width: 40%;
+    &::after {
+        content: "m/s";
+    }
+}
+
+// #endregion 
+
 $play-button-size: 7vh;
 #play-sim-button {
     background-image: url("../../img/play-button.png");
@@ -96,6 +139,8 @@ $play-button-size: 7vh;
         background-image: url("../../img/replay.png");
     }
 }
+
+// #region Simulation Components
 
 @mixin has-label {
     display: flex;
@@ -140,9 +185,9 @@ $play-button-size: 7vh;
         content: "m"
     }
 
-    visibility: hidden;
+    display: none;
     #sim-container[data-pos="true"] & {
-        visibility: visible;
+        display: block;
     }
 }
 
@@ -152,9 +197,9 @@ $play-button-size: 7vh;
         content: "m/s"
     }
 
-    visibility: hidden;
+    display: none;
     #sim-container[data-vel="true"] & {
-        visibility: visible;
+        display: block;
     }
 }
 .acc-label {
@@ -163,9 +208,9 @@ $play-button-size: 7vh;
         content: "m/s²"
     }
 
-    visibility: hidden;
+    display: none;
     #sim-container[data-acc="true"] & {
-        visibility: visible;
+        display: block;
     }
 }
 
@@ -181,7 +226,9 @@ $play-button-size: 7vh;
     @include has-label();
 }
 
-// Acceleration sim
+//#endregion
+
+// #region Acceleration sim
 #acceleration-sim {
     visibility: hidden;
     #sim-container[data-sim="acceleration"] & {
@@ -196,3 +243,5 @@ $play-button-size: 7vh;
 #acc-sim-line {
     translate: 50vw calc($container-height / 2);
 }
+
+// #endregion
