@@ -228,10 +228,10 @@ body::-webkit-scrollbar {
 }
 
 #acceleration-sim {
-  visibility: hidden;
+  display: none;
 }
-#sim-container[data-sim=acceleration] #acceleration-sim {
-  visibility: visible;
+body[data-activesim=acceleration] #acceleration-sim {
+  display: block;
 }
 
 #acc-sim-car {

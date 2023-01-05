@@ -33,6 +33,11 @@ let firstPlay = true
 let inAnim = false
 let paused = false
 
+let activeSim = "acceleration"
+
+// Connections
+const simUpdates = {}
+
 function updateButton()
 {
     if (firstPlay)
@@ -56,6 +61,47 @@ function togglePause()
 
 updateButton()
 
+// Variables
+const vars = {
+    "acceleration": {
+        distance: 10,
+        acceleration: 2,
+        velocity: 0,
+    }
+}
+
+const varUpdates = {}
+const sinvarObjects = document.getElementById("variables").children
+for (let i = 0; i < sinvarObjects.length; i++)
+{
+    const variableObjects = sinvarObjects.item(i).children
+    const simname = sinvarObjects.item(i).dataset["simname"]
+
+    sinvarObjects.item(i).style.display="none"
+
+    function simUpdate()
+    {
+        sinvarObjects.item(i).style.display = activeSim == simname?"block":"none"
+    }
+
+    simUpdates[simname] = simUpdate
+    simUpdate()
+
+    for (let j = 0; j < variableObjects.length; j++)
+    {
+        const varObject = variableObjects.item(j)
+        const varInput = varObject.children.item(1)
+        const name = varObject.dataset["varname"]
+
+        varInput.value = vars[simname][name]
+        varInput.addEventListener("change", () => {
+            vars[simname][name] = varInput.value
+            varUpdates[simname]()
+            console.log(name, vars[simname][name])
+        })
+    }
+}
+
 // Acceleration Sim
 let sims = {};
 (() => {
@@ -63,23 +109,41 @@ let sims = {};
     const accLabel = document.getElementById("acc-sim-acc-label")
     const velLabel = document.getElementById("acc-sim-vel-label")
     const posLabel = document.getElementById("acc-sim-pos-label")
+    const targetLabel = document.getElementById("acc-sim-line-pos")
 
     const car = document.getElementById("acc-sim-car")
 
-    // Initial Variables
-    let initialPos = 0
-    let initialVelocity = 0
-    let acceleration = 2
-    let targetPos = 10
-    let pos = initialPos
-    let velocity = initialVelocity
+    const simVars = vars["acceleration"]
 
-    function updateVars()
+    // Initial Variables
+    let initialVelocity
+    let acceleration
+
+    let targetPos
+    let pos = 0
+    let velocity
+
+    function updateVarDisplay()
     {
         accLabel.innerHTML = digits(acceleration, 2)
         velLabel.innerHTML = digits(velocity, 2)
         posLabel.innerHTML = digits(pos, 2)
+        targetLabel.innerHTML = digits(targetPos, 2)
     }
+
+    function updateStartVars()
+    {
+        targetPos = simVars.distance
+        initialVelocity = simVars.velocity
+        acceleration = simVars.acceleration
+        velocity = initialVelocity
+
+        updateVarDisplay()
+    }
+
+    varUpdates["acceleration"] = updateStartVars
+
+    updateStartVars()
 
     let elaspsedTime
 
@@ -96,7 +160,7 @@ let sims = {};
         pos = Math.min(changeX(initialVelocity, acceleration, elaspsedTime), targetPos)
         velocity = getVel(initialVelocity, acceleration, elaspsedTime)
 
-        updateVars()
+        updateVarDisplay()
         let alpha = Math.min(pos / targetPos, 1)
 
         car.style.transform = `translate(calc(${alpha*40}vw - ${alpha*3.5}vh))`
@@ -115,11 +179,14 @@ let sims = {};
     }
 })()
 
-let activeSim = "acceleration"
 const simSelection = document.getElementById("simulation-selection")
 simSelection.onchange = () => {
     activeSim = simSelection.value
-    simContainer.dataset.sim = activeSim
+    document.body.dataset.activesim = activeSim
+
+    Object.keys(simUpdates).map((key) => {
+        simUpdates[key]()
+    })
 }
 
 playButton.onclick = () => {

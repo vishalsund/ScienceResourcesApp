@@ -230,9 +230,9 @@ $play-button-size: 7vh;
 
 // #region Acceleration sim
 #acceleration-sim {
-    visibility: hidden;
-    #sim-container[data-sim="acceleration"] & {
-        visibility: visible;
+    display: none;
+    body[data-activesim="acceleration"] & {
+        display: block;
     }   
 }
 

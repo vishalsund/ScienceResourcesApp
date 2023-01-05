@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="../css/physics/kinematics-simulator.css">
         <title>Kinematics Simulator</title>
     </head>
-    <body>
+    <body data-activesim="acceleration">
         <div id="title">Kinematics Simulator</div>
         <select id="simulation-selection">
             <option value="acceleration">acceleration</option>
@@ -34,14 +34,21 @@
             </div>
             <div id="data-toggles-label">Variables</div>
             <div id="variables">
-                <div class="variable-container" data-var-name="distance">
-                    <div class="variable-label">Distance: </div>
-                    <input type="number" class="variable-input">
-                </div>
+                <div data-simname="acceleration">
+                    <div class="variable-container" data-varname="distance">
+                        <div class="variable-label">Distance: </div>
+                        <input type="number" class="variable-input">
+                    </div>
 
-                <div class="variable-container" data-var-name="acceleration">
-                    <div class="variable-label">Acceleration: </div>
-                    <input type="number" class="variable-input">
+                    <div class="variable-container" data-varname="velocity">
+                        <div class="variable-label">Velocity: </div>
+                        <input type="number" class="variable-input">
+                    </div>
+    
+                    <div class="variable-container" data-varname="acceleration">
+                        <div class="variable-label">Acceleration: </div>
+                        <input type="number" class="variable-input">
+                    </div>
                 </div>
             </div>
         </div>
