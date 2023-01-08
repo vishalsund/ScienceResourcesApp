@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/themes/physics.css">
+        <link rel="stylesheet" href="../css/physics/kinematics-simulator.css">
+        <title>Kinematics Simulator</title>
+    </head>
+    <body data-activesim="acceleration">
+        <div id="title">Kinematics Simulator</div>
+        <select id="simulation-selection">
+            <option value="acceleration">acceleration</option>
+            <option value="test1">test1</option>
+            <option value="test2">test2</option>
+            <option value="test3">test3</option>
+        </select>
+        <div id="left-side">
+            <div id="data-toggles-label">Labels</div>
+            <div id="data-visibility">
+                <div class="toggle-label">
+                    <div>Position</div>
+                    <div id="pos-toggle" class="toggle-button" data-toggle="true"><div class="toggle-center"></div></div>
+                </div>
+                <div class="toggle-label">
+                    <div>Velocity</div>
+                    <div id="vel-toggle" class="toggle-button" data-toggle="true"><div class="toggle-center"></div></div>
+                </div>
+                <div class="toggle-label">
+                    <div>Acceleration</div>
+                    <div id="acc-toggle" class="toggle-button" data-toggle="true"><div class="toggle-center"></div></div>
+                </div>
+            </div>
+            <div id="data-toggles-label">Variables</div>
+            <div id="variables">
+                <div data-simname="acceleration">
+                    <div class="variable-container" data-varname="distance">
+                        <div class="variable-label">Distance: </div>
+                        <input type="number" class="variable-input">
+                    </div>
+
+                    <div class="variable-container" data-varname="velocity">
+                        <div class="variable-label">Velocity: </div>
+                        <input type="number" class="variable-input">
+                    </div>
+    
+                    <div class="variable-container" data-varname="acceleration">
+                        <div class="variable-label">Acceleration: </div>
+                        <input type="number" class="variable-input">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sim-container" data-sim="acceleration" data-pos="true" data-vel="true" data-acc="true">
+            <div id="play-sim-button"></div>
+            <div class="sim" id="acceleration-sim">
+                <!-- Car -->
+                <div class="car" id="acc-sim-car">
+                    <div class="label-container">
+                        <div class="acc-label" id="acc-sim-acc-label">10</div>
+                        <div class="vel-label" id="acc-sim-vel-label">0</div>
+                        <div class="pos-label" id="acc-sim-pos-label">0</div>
+                    </div>
+                </div>
+
+                <!-- Target Line -->
+                <div class="v-target-line" id="acc-sim-line">
+                    <div class="pos-label" id="acc-sim-line-pos">10</div>
+                </div>
+
+                <!-- Distance Label -->
+                <div class="label" id="acc-sim-distance-label"></div>
+            </div>
+        </div>
+        <script src="../js/physics/kinematics-simulator.js"></script>
+    </body>
+</html>

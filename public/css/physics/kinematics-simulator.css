@@ -32,6 +32,24 @@ body::-webkit-scrollbar {
   transition: all 0s !important;
 }
 
+:root {
+  --color1: #FF4800;
+  --color2: #FF6000;
+  --color3: #FF7900;
+  --color4: #ff9a42;
+  --color5: #fc9b47;
+  --color6: #f3cba9;
+}
+
+#simulation-selection {
+  border-style: none;
+  user-select: none;
+  color: rgba(0, 0, 0, 0.377);
+  background-color: #FF7900;
+  font-size: 150%;
+  appearance: none;
+}
+
 #sim-container {
   position: absolute;
   width: 60vw;
@@ -43,6 +61,72 @@ body::-webkit-scrollbar {
   border-style: solid;
 }
 
+#left-side {
+  position: absolute;
+  left: 3vh;
+  top: calc(50% - 30vh);
+  width: calc(50% - 30vw - 6vh);
+  color: rgba(0, 0, 0, 0.377);
+}
+
+#data-visibility {
+  margin-bottom: 5vh;
+}
+
+#data-toggles-label {
+  margin-bottom: 2vh;
+  font-size: 3vh;
+}
+
+.toggle-label {
+  display: flex;
+  flex-direction: row;
+  color: rgba(0, 0, 0, 0.377);
+}
+
+.toggle-button {
+  width: 3.5vh;
+  height: 3.5vh;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(0, 0, 0, 0.377);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1vh;
+  margin-left: 1vh;
+}
+
+.toggle-center {
+  width: 2.6vh;
+  height: 2.6vh;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.377);
+}
+.toggle-button[data-toggle=true] > .toggle-center {
+  visibility: visible;
+}
+
+.variable-container {
+  display: flex;
+  flex-direction: row;
+  color: rgba(0, 0, 0, 0.377);
+  margin-bottom: 1vh;
+}
+
+.variable-label {
+  margin-right: 1vh;
+}
+
+.variable-input {
+  position: absolute;
+  right: 10%;
+  width: 40%;
+}
+.variable-input::after {
+  content: "m/s";
+}
+
 #play-sim-button {
   background-image: url("../../img/play-button.png");
   background-position: center;
@@ -50,12 +134,20 @@ body::-webkit-scrollbar {
   background-size: cover;
   filter: opacity(0.377);
   position: absolute;
-  width: 10vh;
-  height: 10vh;
-  transition: all 0.5s;
+  width: 7vh;
+  height: 7vh;
+  left: 1vh;
+  top: 1vh;
+  transition: scale 0.5s;
 }
 #play-sim-button:hover {
   scale: 1.1;
+}
+#play-sim-button[data-state=paused] {
+  background-image: url("../../img/circled-pause.png");
+}
+#play-sim-button[data-state=replay] {
+  background-image: url("../../img/replay.png");
 }
 
 .label-container {
@@ -84,9 +176,13 @@ body::-webkit-scrollbar {
   text-align: center;
   width: 10vh;
   translate: -50% -7.5vh;
+  display: none;
 }
 .pos-label::after {
   content: "m";
+}
+#sim-container[data-pos=true] .pos-label {
+  display: block;
 }
 
 .vel-label {
@@ -96,9 +192,13 @@ body::-webkit-scrollbar {
   text-align: center;
   width: 10vh;
   translate: -50% -7.5vh;
+  display: none;
 }
 .vel-label::after {
   content: "m/s";
+}
+#sim-container[data-vel=true] .vel-label {
+  display: block;
 }
 
 .acc-label {
@@ -108,9 +208,13 @@ body::-webkit-scrollbar {
   text-align: center;
   width: 10vh;
   translate: -50% -7.5vh;
+  display: none;
 }
 .acc-label::after {
   content: "m/s²";
+}
+#sim-container[data-acc=true] .acc-label {
+  display: block;
 }
 
 .v-target-line {
@@ -121,6 +225,13 @@ body::-webkit-scrollbar {
   top: -10vh;
   background-color: rgba(0, 0, 0, 0.377);
   display: flex;
+}
+
+#acceleration-sim {
+  display: none;
+}
+body[data-activesim=acceleration] #acceleration-sim {
+  display: block;
 }
 
 #acc-sim-car {
