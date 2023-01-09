@@ -1,0 +1,94 @@
+body {
+  overflow-x: hidden;
+  font-family: Consolas, "Courier New", monospace;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#title {
+  color: rgba(0, 0, 0, 0.377);
+  font-size: 500%;
+  text-align: center;
+  margin-top: 1.5%;
+  user-select: none;
+  transition: all 0.5s;
+}
+#title:hover {
+  scale: 1.05;
+}
+
+.inst {
+  transition: all 0s !important;
+}
+
+:root {
+  --color1: #003a1d;
+  --color2: #006100;
+  --color3: #008b00;
+  --color4: #38B000;
+  --color5: #c0ffa2;
+}
+
+body {
+  font-size: 200%;
+  font-weight: bold;
+  color: white;
+  background-image: linear-gradient(#008b00, #38B000);
+}
+
+#title {
+  font-size: 500%;
+  text-align: center;
+  margin-top: 1.5%;
+  transition: all 0.5s;
+}
+#title:hover {
+  transform: scale(1.05);
+}
+
+.codonchart {
+  margin-bottom: 5vh;
+  width: 50vw;
+  margin-left: 25vw;
+  box-shadow: 0 4px 6px #000000;
+  border-radius: 5%;
+  transition: all 0.5s;
+}
+
+#converter {
+  margin-left: 40vw;
+}
+
+#subtitle {
+  margin-left: 37.5vw;
+}
+
+#mRNA {
+  margin-bottom: 3vh;
+}
+
+#protein {
+  margin-bottom: 3vh;
+}
+
+#submit {
+  color: white;
+  font-size: 75%;
+  font-weight: bold;
+  font-family: Consolas, "Courier New", monospace;
+  border-style: solid;
+  width: 10vw;
+  height: 7.5vh;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  margin-left: 5vw;
+  border-radius: 1vh;
+  border-color: white;
+  background-color: #38B000;
+  transition: all 0.5s;
+}
+#submit:hover {
+  transform: scale(1.075);
+}

@@ -1,4 +1,4 @@
-document.getElementById("title").onclick = () => window.location.href = "./home.html";
+document.getElementById("title").onclick = () => window.location.href = "../index.html#biology";
 document.getElementById("0").onclick = () => window.location.href = "https://www.britannica.com/science/nucleus-biology";
 document.getElementById("1").onclick = () => window.location.href = "https://www.britannica.com/science/rough-endoplasmic-reticulum";
 document.getElementById("2").onclick = () => window.location.href = "https://www.britannica.com/science/mitochondrion";

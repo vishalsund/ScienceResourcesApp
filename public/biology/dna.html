@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DNA</title>
+        <link rel = "stylesheet" href = "../css/themes/biology.css">
+        <link rel = "stylesheet" href = "../css/biology/dna.css">
+    </head>
+    <body>
+        <h1 id = "title">DNA</h1>
+        <img src = "../img/doublehelix.jpg" alt = "Image of DNA" class= "codonchart">
+        <img src = "../img/Codon Chart.png" alt = "Codon Chart" class = "codonchart">
+        <h2 id = "subtitle">DNA Strand Converter</h2>
+        <div id = "converter">
+            <div>
+                <label for = "input-codon">DNA Strand:</label>
+                <input type = "text" id = "input-codon" name = "input-codon">
+            </div>
+            <button id = "submit">Submit</button>
+            <div id = "mRNA">
+                <label for = "mRNA-output">mRNA Strand:</label>
+                <output name = "mRNA-output" id = "mrna-output"></output>
+            </div>
+            <div id = "protein">
+                <label for = "protein-output">Protein:</label>
+                <output name = "protein-output" id = "protein-output"></output>
+            </div>
+        </div>
+    <script src = "../js/dna.js"></script>
+    </body>
+</html>
