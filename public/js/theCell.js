@@ -1,0 +1,11 @@
+document.getElementById("title").onclick = () => window.location.href = "../index.html#biology";
+document.getElementById("0").onclick = () => window.location.href = "https://www.britannica.com/science/nucleus-biology";
+document.getElementById("1").onclick = () => window.location.href = "https://www.britannica.com/science/rough-endoplasmic-reticulum";
+document.getElementById("2").onclick = () => window.location.href = "https://www.britannica.com/science/mitochondrion";
+document.getElementById("3").onclick = () => window.location.href = "https://www.britannica.com/science/cytoplasm";
+document.getElementById("4").onclick = () => window.location.href = "https://www.britannica.com/science/Golgi-apparatus";
+document.getElementById("5").onclick = () => window.location.href = "https://www.britannica.com/science/lysosome";
+document.getElementById("6").onclick = () => window.location.href = "https://www.britannica.com/science/ribosome";
+document.getElementById("7").onclick = () => window.location.href = "https://www.britannica.com/science/cell-membrane";
+document.getElementById("8").onclick = () => window.location.href = "https://www.britannica.com/science/smooth-endoplasmic-reticulum";
+document.getElementById("9").onclick = () => window.location.href = "https://www.britannica.com/science/cytoskeleton";
