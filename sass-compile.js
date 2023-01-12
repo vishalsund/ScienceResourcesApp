@@ -26,11 +26,9 @@ function compileDir(dir)
 
             }
         } else {
-            // is Dir
             compileDir(dir+"/"+file)
         }
     })
 }
-
 
 compileDir()
