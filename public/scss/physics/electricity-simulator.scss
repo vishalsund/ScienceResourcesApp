@@ -1,0 +1,43 @@
+@use "../background.scss";
+@use "../base.scss" as *;
+@use "../themes/physics.scss" as *;
+@use "../background.scss" as *;
+
+#container {
+    position: absolute;
+    width: 40vw;
+    height: 50vh;
+    left: 30vw;
+    top: 25vh;
+    // background-color: red;
+    display: flexbox;
+    align-items: center;
+}
+
+div {
+    color: $title-color;
+    font-size: 150%;
+}
+
+#solve-select {
+    border-style: none;
+    user-select: none;
+    color: $title-color;
+    background-color: $color3;
+    font-size: 150%;
+
+    appearance: none;
+}
+
+.value-label {
+    font-size: 75%;
+    user-select: none;
+}
+
+.value {
+
+}
+
+.disabled {
+    user-select: none;
+}

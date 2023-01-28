@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/themes/physics.css">
+        <link rel="stylesheet" href="../css/physics/electricity-simulator.css">
+        <title>Electricity Simulator</title>
+    </head>
+    <body>
+        <div id="title">Electricity Simulator</div>
+        <div id="container">
+            <span id="solve-label">Solve For:</span>
+            <select id="solve-select">
+                <option value="Resistance">Resistance</option>
+                <option value="Amps">Amps</option>
+                <option value="Voltage">Voltage</option>
+            </select>
+
+            <div class="value-container">
+                <span class="value-label">Volts</span>
+                <input type="number" class="value" id="Volts-Input">
+            </div>
+            <div class="value-container">
+                <span class="value-label">Resistance</span>
+                <input type="number" class="value" id="Resistance-Input">
+            </div>
+            <div class="value-container">
+                <span class="value-label">Amperage</span>
+                <input type="number" class="value" id="Amps-Input">
+            </div>
+            
+            <script src="../js/physics/electricity-simulator.js"></script>
+        </div>
+    </body>
+</html>

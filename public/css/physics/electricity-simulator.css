@@ -1,0 +1,74 @@
+body {
+  background-image: linear-gradient(var(--color3), var(--color4));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Consolas, "Courier New", monospace;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#title {
+  color: rgba(0, 0, 0, 0.377);
+  font-size: 500%;
+  text-align: center;
+  margin-top: 1.5%;
+  user-select: none;
+  transition: all 0.5s;
+}
+#title:hover {
+  scale: 1.05;
+}
+
+.inst {
+  transition: all 0s !important;
+}
+
+:root {
+  --color1: #FF4800;
+  --color2: #FF6000;
+  --color3: #FF7900;
+  --color4: #ff9a42;
+  --color5: #fc9b47;
+  --color6: #f3cba9;
+}
+
+#container {
+  position: absolute;
+  width: 40vw;
+  height: 50vh;
+  left: 30vw;
+  top: 25vh;
+  display: flexbox;
+  align-items: center;
+}
+
+div {
+  color: rgba(0, 0, 0, 0.377);
+  font-size: 150%;
+}
+
+#solve-select {
+  border-style: none;
+  user-select: none;
+  color: rgba(0, 0, 0, 0.377);
+  background-color: #FF7900;
+  font-size: 150%;
+  appearance: none;
+}
+
+.value-label {
+  font-size: 75%;
+  user-select: none;
+}
+
+.disabled {
+  user-select: none;
+}
