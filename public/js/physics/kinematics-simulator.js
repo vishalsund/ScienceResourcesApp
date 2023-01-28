@@ -1,4 +1,4 @@
-document.getElementById("title").onclick = () => {window.location.href = "../index.html"}
+document.getElementById("title").onclick = () => {window.location.href = "../index.html#physics"}
 
 // Library
 

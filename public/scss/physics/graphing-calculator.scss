@@ -1,0 +1,11 @@
+@use "../background.scss";
+@use "../base.scss" as *;
+@use "../themes/physics.scss" as *;
+@use "../background.scss" as *;
+
+#calculator{
+    width: 80vw;
+    height: 70vh;
+    margin-left: 10vw;
+    margin-top: 5vh;
+}

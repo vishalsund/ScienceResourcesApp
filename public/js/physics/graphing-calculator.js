@@ -1,0 +1,1 @@
+document.getElementById("title").onclick = () => {window.location.href = "../index.html#physics"}
