@@ -70,4 +70,4 @@ function update(){
     }
 }
 document.getElementById("submit").onclick = () => update();
-document.getElementById("title").onclick = () => window.location.href = "../index.html";
+document.getElementById("title").onclick = () => window.location.href = "../index.html#biology";
