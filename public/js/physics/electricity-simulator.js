@@ -1,5 +1,5 @@
 const solveFor = document.getElementById("solve-select")
-
+document.getElementById("title").onclick = () => {window.location.href = "../index.html#physics"}
 const VoltsInput = document.getElementById("Volts-Input")
 const ResistanceInput = document.getElementById("Resistance-Input")
 const AmpsInput = document.getElementById("Amps-Input")
